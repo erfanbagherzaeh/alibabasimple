@@ -1,0 +1,17 @@
+.nav-border{
+    border-bottom: 1px solid rgb(236, 236, 236);
+    box-shadow: 0 0 10px 1px #e6e6e8;
+
+}
+.select{
+    background: none;
+    font-family: 'yekan';
+    font-size: 14px;
+    width: 60px; 
+    text-align: center;
+}
+
+.font-color{
+    color: #676c72;
+}
+
