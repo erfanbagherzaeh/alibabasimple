@@ -15,17 +15,20 @@ const CitySelectorComponent = () => {
   return (
     <div className="w-full h-14 border flex flex-row justify-between rounded-md mt-5 mr-2
     sm:w-full sm:h-14 sm:flex sm:flex-row sm:justify-between
-    md:w-[250px] md:h-[35px]">
+    md:w-[250px] md:h-[35px]
+    lg:w-[340px] lg:h-[45px] lg:mt-1
+    ">
       <div className="w-1/2 pt-5 pl-2 flex flex-row justify-center items-center
       sm:w-1/2 sm:pt-5 sm:pl-2 sm:flex sm:flex-row sm:justify-center sm:items-center
       md:w-1/2 
       ">
         <select
-        style={{fontFamily:'lalezar',fontSize:'10px'}}
+        style={{fontFamily:'vazir',fontSize:'14px'}}
           value={originCity}
           onChange={(e) => setOriginCity(e.target.value)}
           className="h-full w-full bg-white  mb-5 mr-2 rounded-r-lg border
           md:h-[35px] md:w-[100px] md:mr-0
+          lg:w-[150px] lg:h-[45px]
           "
         >
           <option value="">شهر مبدا</option>
@@ -58,11 +61,12 @@ const CitySelectorComponent = () => {
         md:w-1/2 
       ">
         <select
-            style={{fontFamily:'esb',fontSize:'11px'}}
+            style={{fontFamily:'vazir',fontSize:'14px'}}
           value={destinationCity}
           onChange={(e) => setDestinationCity(e.target.value)}
           className="h-[36px] w-full bg-white  mr-2 rounded-l-lg border
           md:h-[35px] md:w-[105px] md:mr-0
+          lg:w-[150px] lg:h-[45px]
           "
         >
           <option  value="">شهر مقصد</option>

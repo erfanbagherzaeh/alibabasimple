@@ -32,7 +32,9 @@ const DateRangePicker = () => {
   };
 
   return (
-    <div className="mt-2 rounded-lg flex w-full h-[55px] border md:w-[170px] md:mt-5 md:mr-3 md:h-[36px]">
+    <div className="mt-2 rounded-lg flex w-full h-[55px] border md:w-[170px] md:mt-5 md:mr-3 md:h-[36px]
+    lg:w-[250px] lg:h-[45px] lg:mt-1
+    ">
       <div className="w-[95%] flex">
         <div className="w-[50%] flex mt-3  md:flex 
         ">
@@ -47,7 +49,7 @@ const DateRangePicker = () => {
             />
           </div>
 
-          <div className='mt-2 mr-5 md:mt-0 md:mr-0' style={{fontFamily:'esb',fontSize:'10px'}} >تاریخ رفت</div>
+          <div className='mt-2 mr-5 md:mt-0 md:mr-0' style={{fontFamily:'vazir',fontSize:'14px'}} > رفت</div>
         </div>
         <div className="flex w-[50%] ml-2 md:border-r-2 mt-3
         md:flex md:mt-0.5
@@ -62,7 +64,7 @@ const DateRangePicker = () => {
             md:w-[30px] md:pl-1 md:mr-0.5 md:h-[25px] md:mt-1
             "/>
           </div>
-          <div className=' mt-2 md:mt-3 md:w-[60px]' style={{fontFamily:'esb',fontSize:'10px'}} >تاریخ برگشت </div>
+          <div className=' mt-2 md:mt-2 md:w-[60px]' style={{fontFamily:'vazir',fontSize:'14px'}} > برگشت </div>
         </div>
       </div>
       <div className="mt-4 space-x-2">

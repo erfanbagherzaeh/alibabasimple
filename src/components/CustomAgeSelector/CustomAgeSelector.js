@@ -40,10 +40,11 @@ const CustomAgeSelector = () => {
     <>
     <div className='w-[98%] h-[50px] mt-6  mr-1 border rounded-lg cursor-pointer 
      md:w-[120px] md:h-[36px] md:mt-5 md:mr-3
+     lg:w-[250px] lg:h-[45px] lg:mt-1
     
     '>
     <div className=" travel text-center ">
-      <span className=' relative top-3 md:relative md:top-1' style={{fontFamily:'esb',fontSize:'12px'}}  onClick={togglePopup}>انتخاب تعداد مسافران</span>
+      <span className=' relative top-3 md:relative md:top-1' style={{fontFamily:'vazir',fontSize:'16px'}}  onClick={togglePopup}>انتخاب تعداد مسافران</span>
       {/* <span  style={{fontFamily:'lalezar',fontSize:'15px'}}  onClick={togglePopup}>تعداد</span> */}
       {isOpen && (
         <div className=" w-[256px] absolute top-full left-0 right-0 z-10  p-4   transition-all duration-300 ease-in-out transform origin-top">
