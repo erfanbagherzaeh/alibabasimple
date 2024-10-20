@@ -1,0 +1,26 @@
+.accordion-container{
+    box-sizing: border-box;
+    text-align: start;
+    margin-top: 20px;
+}
+
+.title-acc{
+    font-size: 20px;
+    font-family:vazir;
+    color: rgb(55, 55, 55);
+    line-height: 45px;
+}
+
+.text-acc{
+    font-size: 15px;
+    font-family: vazir;
+    line-height: 35px;
+}
+
+.qut{
+    font-size: 20px;
+    color: rgb(37, 211, 211);
+    margin-left: 5px;
+    background-color: rgb(195, 255, 235);
+    border-radius: 50%;
+}

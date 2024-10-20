@@ -31,7 +31,7 @@ const SliderComponent = (props) => {
     </div>
 
     <div className='w-3/5 h-[0px]  m-auto mb-10 flex flex-row 
-     md:h-[150px] 
+     md:h-[220px]  
     
     '>
       <div className='w-1/2 h-full  ml-1'>
