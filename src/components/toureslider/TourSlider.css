@@ -1,0 +1,15 @@
+.carousel-item {
+    width: 350px !important;
+    height: auto !important;
+    max-width: 100% !important;
+    border: 1px solid silver;
+    
+    &:last-child {
+      margin-right: 0 !important;
+    }
+  }
+  
+  .carousel-item div {
+    height: 100%;
+  }
+  
