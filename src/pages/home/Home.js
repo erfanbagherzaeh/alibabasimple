@@ -6,7 +6,19 @@ import Main from '../../components/main/Main'
 import Accordion from '../../components/Accordion/Accordion'
 import Intro from '../../components/intro/Intro'
 import Footer from '../../components/footer/Footer'
+
+import { useEffect, useState } from 'react'
+import axios from 'axios'
+import ArticleItem from '../../components/articleItem/ArticleItem'
+
+
 function Home(){
+    const [articles , setAtricles] = useState([])
+
+    useEffect( ()=>{
+        axios.get('http://localhost:3000/articles')
+        .then( response => setAtricles(response.data))
+    } , [])
     return(
         <>
         <Navbar></Navbar>
@@ -29,6 +41,13 @@ function Home(){
         <SliderRes></SliderRes>
         <Main></Main>
         <Accordion></Accordion>
+
+        <div className='w-full h-a  m-2 flex flex-row flex-wrap 
+        md:w-3/5 md:m-auto '>
+            {articles.map(article => (
+                <ArticleItem {...article}></ArticleItem>
+            ))}
+        </div>
         <div className="w-full h-auto  mb-5 
         sm:w-3/5 sm:m-auto
         md:w-3/5 md:m-auto
@@ -128,6 +147,9 @@ function Home(){
         </div>
         <Intro></Intro>
         <Footer></Footer>
+
+        
+        
         </>
     )
 }

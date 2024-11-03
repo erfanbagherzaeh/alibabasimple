@@ -6,6 +6,7 @@ import Bus from './pages/Bus/Bus'
 import Tour from './pages/Tour/Tour'
 import Hotel from './pages/Hotel/Hotel'
 import Villa from './pages/Villa/Villa'
+import Article from "./components/article/Article";
 import './App.css';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route path='Tour' element={<Tour/>}></Route>
         <Route path='Hotel' element={<Hotel/>}></Route>
         <Route path='Villa' element={<Villa/>}></Route>
+        <Route path='Ariticle/:ArticleId' element={<Article/>}></Route>
       </Routes>
     </BrowserRouter>
   );
