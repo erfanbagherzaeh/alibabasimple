@@ -10,6 +10,7 @@ import Footer from '../../components/footer/Footer'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import ArticleItem from '../../components/articleItem/ArticleItem'
+import Login from '../../components/login/Login'
 
 
 function Home(){
@@ -21,7 +22,7 @@ function Home(){
     } , [])
     return(
         <>
-        <Navbar></Navbar>
+        {/* <Navbar></Navbar>
         <div className=" w-full  mb-5 sm:h-56 sm:w-4/5 sm:m-auto">
             <img className="z-0 rounded-3xl w-full " src="https://cdn.alibaba.ir/h2/desktop/assets/images/hero/hero-e1fa22fb.webp"/>
         </div>
@@ -148,8 +149,8 @@ function Home(){
         <Intro></Intro>
         <Footer></Footer>
 
-        
-        
+         */}
+        <Login></Login>
         </>
     )
 }
