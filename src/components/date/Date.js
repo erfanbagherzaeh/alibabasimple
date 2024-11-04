@@ -32,11 +32,11 @@ const DateRangePicker = () => {
   };
 
   return (
-    <div className="mt-2 rounded-lg flex w-full h-[55px] border md:w-[170px] md:mt-5 md:mr-3 md:h-[36px]
+    <div className="m-auto mt-2 rounded-lg flex w-[98%] h-[40px] border md:w-[170px] md:mt-5 md:mr-3 md:h-[36px] 
     lg:w-[250px] lg:h-[45px] lg:mt-1
     ">
       <div className="w-[95%] flex">
-        <div className="w-[50%] flex mt-3  md:flex 
+        <div className="w-[50%] flex  md:flex 
         ">
           <div className='md:relative md:bottom-1.5'>
             <input
@@ -45,11 +45,13 @@ const DateRangePicker = () => {
             value={ReadableDateFormatter(startDate)}
             onChange={(e) => handleStartDateChange(e.target.value)}
             className="mr-2 w-[30px] h-[30px] pr-2   
-            md:w-[30px] md:pl-1 md:mr-0.5 md:h-[25px]"
+            md:w-[30px] md:pl-1 md:mr-0.5 md:h-[25px]
+            lg:relative lg:top-4"
+            
             />
           </div>
 
-          <div className='mt-2 mr-5 md:mt-0 md:mr-0' style={{fontFamily:'vazir',fontSize:'14px'}} > رفت</div>
+          <div className='lg:relative lg:top-3 lg:right-2 mt-2 mr-5 md:mt-0 md:mr-0' style={{fontFamily:'vazir',fontSize:'14px'}} > رفت</div>
         </div>
         <div className="flex w-[50%] ml-2 md:border-r-2 mt-3
         md:flex md:mt-0.5
@@ -60,11 +62,12 @@ const DateRangePicker = () => {
             id="end-date"
             value={ReadableDateFormatter(endDate)}
             onChange={(e) => handleEndDateChange(e.target.value)}
-            className="mr-8 w-[36px] h-[30px] pl-2 pr-2 
+            className="mr-10 w-[36px] h-[30px] pl-2 pr-2  relative bottom-2
             md:w-[30px] md:pl-1 md:mr-0.5 md:h-[25px] md:mt-1
+            lg:relative lg:top-1
             "/>
           </div>
-          <div className=' mt-2 md:mt-2 md:w-[60px]' style={{fontFamily:'vazir',fontSize:'14px'}} > برگشت </div>
+          <div className='lg:relative lg:top-0.5 lg:right-2 relative bottom-1 md:mt-2 md:w-[60px]' style={{fontFamily:'vazir',fontSize:'14px'}} > برگشت </div>
         </div>
       </div>
       <div className="mt-4 space-x-2">

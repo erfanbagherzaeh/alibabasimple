@@ -149,8 +149,7 @@ function Home(){
         <Intro></Intro>
         <Footer></Footer>
 
-        
-        {/* <Login></Login> */}
+
         </>
     )
 }

@@ -13,7 +13,7 @@ const CitySelectorComponent = () => {
   const [destinationCity, setDestinationCity] = useState('');
 
   return (
-    <div className="w-full h-14 border flex flex-row justify-between rounded-md mt-5 mr-2
+    <div className="w-full h-14 border flex flex-row justify-between rounded-md mt-5 
     sm:w-full sm:h-14 sm:flex sm:flex-row sm:justify-between
     md:w-[250px] md:h-[35px]
     lg:w-[340px] lg:h-[45px] lg:mt-1
