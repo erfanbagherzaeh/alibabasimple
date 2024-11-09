@@ -1,4 +1,5 @@
 import './Navbar.css'
+import { Link } from 'react-router-dom';
 
 function Navbar(){
     return(
@@ -77,12 +78,14 @@ function Navbar(){
                         <h1 style={{fontSize:'16px',fontFamily:'vazir'}} className='pt-2 pr-1'>سفر های من</h1>
                     </div>
 
+                    <Link to='/Login'>
                     <div className='font-color w-24 h-8  mr-1 cursor-pointer flex hover:bg-gray-100 hover:rounded-lg'>
                     <span style={{fontSize:'26px'}} className="material-symbols-outlined pt-1.5 pr-2">
                     person
                     </span>
                         <h1 style={{fontSize:'16px',fontFamily:'vazir'}} className='pt-2.5 pr-1'> ثبت نام</h1>
                     </div>
+                    </Link>
                 </div>
             </div>
 

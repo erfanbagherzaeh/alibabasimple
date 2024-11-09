@@ -22,7 +22,7 @@ function Home(){
     } , [])
     return(
         <>
-        <Navbar></Navbar>
+         <Navbar></Navbar>
         <div className=" w-full  mb-5 sm:h-56 sm:w-4/5 sm:m-auto">
             <img className="   rounded-3xl w-full " src="https://cdn.alibaba.ir/h2/desktop/assets/images/hero/hero-e1fa22fb.webp"/>
         </div>
@@ -44,8 +44,8 @@ function Home(){
         <Accordion></Accordion>
 
 
-        {/* create fake api  */}
-        <div className='w-full h-a  m-2 flex flex-row flex-wrap 
+        {/* create fake api */}
+         <div className='w-full h-a  m-2 flex flex-row flex-wrap 
         md:w-3/5 md:m-auto '>
             {articles.map(article => (
                 <ArticleItem {...article}></ArticleItem>
@@ -151,8 +151,8 @@ function Home(){
             </div>
         </div>
         <Intro></Intro>
-        <Footer></Footer>
-
+        <Footer></Footer> 
+        
 
         </>
     )

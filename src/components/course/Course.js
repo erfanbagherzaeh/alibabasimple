@@ -122,7 +122,7 @@ function MenuItem(){
                             
                         </div>
                         </Link>
-                        <Link to='/Hotel'>
+                        <Link to='/Villa'>
                         <div className='tab w-[120px] h-[100px]  my-5 lg:mx-4'>
 
                             <div className='w-full h-[70%]  flex flex-row justify-center items-center'>

@@ -51,7 +51,7 @@ export default function BasicSelect() {
                 onChange={handleSelectChange('origin')}
               >
                 <MenuItem style={{fontFamily:'vazir'}} value="">انتخاب کنید</MenuItem>
-                <MenuItem style={{fontFamily:'vazir'}} value="تهیه">تهیه</MenuItem>
+                <MenuItem style={{fontFamily:'vazir'}} value="تهیه">تهران</MenuItem>
                 <MenuItem style={{fontFamily:'vazir'}} value="اصفهان">اصفهان</MenuItem>
                 <MenuItem style={{fontFamily:'vazir'}} value="شیراز">شیراز</MenuItem>
                 <MenuItem style={{fontFamily:'vazir'}} value="جنوب">جنوب</MenuItem>
@@ -78,7 +78,7 @@ export default function BasicSelect() {
                 onChange={handleSelectChange('destination')}
               >
                 <MenuItem style={{fontFamily:'vazir'}} value="">انتخاب کنید</MenuItem>
-                <MenuItem style={{fontFamily:'vazir'}} value="تهیه">تهیه</MenuItem>
+                <MenuItem style={{fontFamily:'vazir'}} value="تهیه">تهران</MenuItem>
                 <MenuItem style={{fontFamily:'vazir'}} value="اصفهان">اصفهان</MenuItem>
                 <MenuItem style={{fontFamily:'vazir'}} value="شیراز">شیراز</MenuItem>
                 <MenuItem style={{fontFamily:'vazir'}} value="جنوب">جنوب</MenuItem>

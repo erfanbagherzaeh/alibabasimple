@@ -1,0 +1,14 @@
+.nmb{
+    color: rgb(158, 155, 155);
+    direction: ltr;
+}
+
+.log{
+    border: 1px solid rgb(225, 225, 225);
+    border-radius: 15px;
+}
+
+.number-box{
+    border: 1px solid rgb(225, 225, 225);
+    border-radius: 10px;
+}

@@ -6,3 +6,7 @@
     font-family: 'vazir';
     src: url(../src/assets/fonts/Vazir.woff2);
 }
+
+*{
+    font-family: 'vazir';
+}
