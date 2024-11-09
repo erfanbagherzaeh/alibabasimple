@@ -24,7 +24,7 @@ function Home(){
         <>
         <Navbar></Navbar>
         <div className=" w-full  mb-5 sm:h-56 sm:w-4/5 sm:m-auto">
-            <img className="z-0 rounded-3xl w-full " src="https://cdn.alibaba.ir/h2/desktop/assets/images/hero/hero-e1fa22fb.webp"/>
+            <img className="   rounded-3xl w-full " src="https://cdn.alibaba.ir/h2/desktop/assets/images/hero/hero-e1fa22fb.webp"/>
         </div>
         <Course></Course>
         <Feature></Feature>
@@ -43,18 +43,22 @@ function Home(){
         <Main></Main>
         <Accordion></Accordion>
 
+
+        {/* create fake api  */}
         <div className='w-full h-a  m-2 flex flex-row flex-wrap 
         md:w-3/5 md:m-auto '>
             {articles.map(article => (
                 <ArticleItem {...article}></ArticleItem>
             ))}
         </div>
+
+        
         <div className="w-full h-auto  mb-5 
         sm:w-3/5 sm:m-auto
         md:w-3/5 md:m-auto
         ">
             <div className=" md:flex ">
-                <div className='md:w-[50%] md:mt-14'>
+                <div className='md:w-[50%] md:mt-14  m-5'>
                 <h1 className="font-bold mb-5 mt-7" style={{fontFamily:'vazir',fontSize:'30px'}}>بلیط هواپیما</h1>
                 <p style={{
                     fontFamily:'vazir',
@@ -77,7 +81,7 @@ function Home(){
         sm:w-3/5 sm:m-auto
         md:w-3/5 md:m-auto
         ">
-            <div className="">
+            <div className="m-5">
                 <h1 className="font-bold mb-5 mt-5" style={{fontFamily:'vazir',fontSize:'30px'}}>مزایای خرید بلیط هواپیما از علی‌بابا</h1>
                 <p style={{
                     fontFamily:'vazir',
@@ -99,7 +103,7 @@ function Home(){
         sm:w-3/5 sm:m-auto
         md:w-3/5 md:m-auto
         ">
-            <div className="">
+            <div className="m-5">
                 <h1 className="font-bold mb-5 mt-5" style={{fontFamily:'vazir',fontSize:'30px'}}>امکان استرداد بلیط هواپیما</h1>
                 <p style={{
                     fontFamily:'vazir',
@@ -115,7 +119,7 @@ function Home(){
         sm:w-3/5 sm:m-auto
         md:w-3/5 md:m-auto
         ">
-            <div className="">
+            <div className="m-5">
                 <h1 className="font-bold mb-5 mt-5" style={{fontFamily:'vazir',fontSize:'30px'}}>رزرو بلیط هواپیما از معتبرترین ایرلاین‌ها</h1>
                 <p style={{
                     fontFamily:'vazir', 
@@ -133,7 +137,7 @@ function Home(){
         sm:w-3/5 sm:m-auto
         md:w-3/5 md:m-auto
         ">
-            <div className="">
+            <div className="m-5">
                 <h1 className="font-bold mb-5 mt-5" style={{fontFamily:'vazir',fontSize:'25px'}}>علی‌بابا: رتبه یک خرید اینترنتی بلیط سفر</h1>
                 <p style={{
                     fontFamily:'vazir',

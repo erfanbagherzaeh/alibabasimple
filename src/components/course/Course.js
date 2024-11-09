@@ -1,142 +1,194 @@
-import City from '../city/City.js';
-import Date from '../date/Date.js';
-import PassengerSelector from '../../components/CustomAgeSelector/CustomAgeSelector.js'
+// import './MenuItem.css'
+import './Course.css';
+import { GiCommercialAirplane } from "react-icons/gi";
+import { MdAirplanemodeActive } from "react-icons/md";
+import { PiTrainFill } from "react-icons/pi";
+import { BsBusFront } from "react-icons/bs";
+import { BsBackpack4 } from "react-icons/bs";
+import { FaHotel } from "react-icons/fa6";
+import { MdVilla } from "react-icons/md";
+import City from '../city/City'
+import Date from '../date/Date'
+import ItemCountDropdown from '../age/Age'
 import { Link } from 'react-router-dom';
-import './Course.css'
-function Course(){
+
+
+function MenuItem(){
+    // <Box sx={{ width: '100%', mb: 10 }}>
+    // <Box sx={{
+    //   backgroundColor: 'white',
+    //   width: '100%',
+    //   maxWidth: '1200px',
+    //   margin: '0 auto',
+    //   position: 'relative',
+    //   p: 2,
+    // }}>
     return(
         <>
-        <div className='h-[580px] lg:h-[300px] bg-white co-po w-full  mt-16  sm:w-3/5 sm:m-auto  md:w-4/5 md:m-auto md:h-48 border rounded-lg lg:w-3/5 lg:m-auto
-        lg:mt-24
-        '>
-            <div className='co-border w-full h-auto'>
-            <div className=' w-[100%] h-[200px]  flex md:w-[85%] my-5
-            md:m-auto md:h-[73px]
-            lg:h-[100px] lg:w-[80%]
-            '>
-                <div className=' co-raght w-[50%] h-[140px] md:w-[60%]  md:flex md:flex-row md:h-[55px] '>
-                    <div className=' hidden mt-2 mr-2 ml-2 tt w-full h-1/3  flex-row items-center cursor-pointer md:flex md:flex-col md:pt-2  md:rounded-lg 
-                    md:h-[60px]  md:w-[400px] md:relative md:bottom-3 
-                    lg:h-[80px] lg:w-[200px]  lg:mx-1 lg:mt-6
-                    '>
-                    <Link to='/'>
-                        <img className=' font-color w-[45px] h-[40px] mb-1 mr-4' src="https://img.icons8.com/carbon-copy/100/airplane-landing.png" alt="airplane-landing"/>
-                        <h1 className='md:w-[80px]  font-color mt-0' style={{fontSize:'16px',fontFamily:'vazir'}}>پرواز داخلی</h1>
-                    </Link>
+
+        <div className=' w-full h-auto mb-10 ' >
+            <div className='menu-item w-full h-auto  bg-white
+            md:w-3/5 md:m-auto  relative  
+            '   
+   
+            
+            >
+
+                {/* ********************************
+                *     up side of menu item     *
+                ******************************** */}
+                <div className='up flex flex-row justify-center lg:h-[150px] '>
+                    <div className=' right w-[50%] p-5 flex flex-col items-center
+                    lg:flex lg:flex-row lg:w-[57%]  lg:justify-end lg:pr-10
+                   
+                    '>  
+                        <Link to='/' className='w-0 h-0 lg:w-[120px] lg:h-[100px]  lg:mx-6 lg:mb-5'>
+                        <div className='tab w-0 h-0 lg:w-[120px] lg:h-[100px]  lg:mx-6 md:{10}'>
+                            <div className='lg:w-full lg:h-[70%] flex flex-row justify-center items-center'>
+                                <GiCommercialAirplane   size={'30px'} />
+                            </div>
+                            <div className=' lg:w-full lg:h-[30%]  flex flex-row justify-center items-center'>
+                                <h1 className='text-white lg:text-slate-600'>برواز داخلی</h1>
+                            </div>
+                        </div>
+                        </Link>
+
+                        <Link to='/ParvazB'>
+                        <div className='tab w-[120px] h-[100px]  my-5 lg:mx-6 '>
+                            <div className='w-full h-[70%]  flex flex-row justify-center items-center'>
+                                <MdAirplanemodeActive    size={'30px'} />
+                            </div>
+                            <div className='w-full h-[30%]  flex flex-row justify-center items-center'>
+                                <p>برواز خارجی</p>
+                            </div>
+                        </div>
+                        </Link>
+
+                        <Link to='/Train'>
+
+                        <div className='tab w-[120px] h-[100px]  my-5 lg:mx-6'>
+
+                            <div className='w-full h-[70%]  flex flex-row justify-center items-center'>
+                                <PiTrainFill     size={'30px'} />
+                            </div>
+                            <div className='w-full h-[30%]  flex flex-row justify-center items-center'>
+                                <p>قظار</p>
+                            </div>
+                        </div>
+                        </Link>
+
+                        <Link to='/Bus'>
+                        <div className='tab w-[120px] h-[100px]  my-5 lg:mx-6'>
+
+                            <div className='w-full h-[70%]  flex flex-row justify-center items-center'>
+                                <BsBusFront     size={'30px'} />
+                            </div>
+                            <div className='w-full h-[30%]  flex flex-row justify-center items-center'>
+                                <p>اتوبوس</p>
+                            </div>
+
+                        </div>
+                        </Link>
+                    </div>
+
+
+                    <div className='left w-[50%] p-5 flex flex-col items-center
+                    lg:flex lg:flex-row lg:w-[40%] lg:justify-start lg:relative lg:left-10
+                    
+                    '>  
+                         <Link to='/Tour'>
+                        <div className='tab w-[120px] h-[100px]  my-5 lg:mx-4'>
+                       
+
+                            <div className='w-full h-[70%]  flex flex-row justify-center items-center'>
+                                <BsBackpack4     size={'30px'} />
+                            </div>
+                            <div className=' w-full h-[30%]  flex flex-row justify-center items-center'>
+                                <p>تور</p>
+                            </div>
+
+                        </div>
+                        </Link>
+                        <Link to='/Hotel'>
+
+                        <div className='tab w-[120px] h-[100px]  my-5 lg:mx-4'>
+
+                            <div className='w-full h-[70%]  flex flex-row justify-center items-center'>
+                                <FaHotel      size={'30px'} />
+                            </div>
+                            <div className='w-full h-[30%]  flex flex-row justify-center items-center'>
+                                <p>هتل</p>
+                            </div>
+                            
+                        </div>
+                        </Link>
+                        <Link to='/Hotel'>
+                        <div className='tab w-[120px] h-[100px]  my-5 lg:mx-4'>
+
+                            <div className='w-full h-[70%]  flex flex-row justify-center items-center'>
+                                <MdVilla       size={'30px'} />
+                            </div>
+                            <div className='w-full h-[30%]  flex flex-row justify-center items-center'>
+                                <p>ویلا</p>
+                            </div>
+
+                        </div>
+                        </Link>
                     </div>
                     
-                    <div className='mt-5 pb-5 font-color  mr-2 ml-2 tt w-full h-1/3  flex flex-row items-center cursor-pointer md:flex md:flex-col md:pt-2  md:rounded-lg  
-                     md:w-[400px] md:h-[60px] md:relative md:bottom-4  md:mr-3
-                     lg:h-[80px] lg:w-[200px]  lg:mx-1 lg:relative lg:bottom-3
-                     '>
-                    <Link to='/ParvazB'>
-                        <img className='mr-5 lg:text-2xl lg:mr-5 lg:w-[45px] lg:h-[40px] w-[28px] h-[28px] mb-1 ' src="https://img.icons8.com/dotty/80/airplane-take-off--v2.png" alt="airplane-take-off--v2"/>  
-                        <h1 className='md:w-[80px] mt-2 ' style={{fontSize:'16px',fontFamily:'vazir'}}>پرواز خارجی</h1>
-                    </Link>
-                        
-                    </div>
-                    <div className=' pt-5 pb-5 it-bo font-color mt-2 mr-2 ml-2 w-full h-1/3  flex flex-row items-center cursor-pointer md:flex md:flex-col md:pt-2  md:rounded-lg 
-                    md:h-[60px]  md:w-[400px] md:relative md:bottom-6 md:mr-0
-                    lg:h-[80px] lg:w-[200px]  lg:mx-1 lg:relative lg:bottom-3
-                    '>
-                    <Link to='/Train'>
-                        <img className='mt-5 mr-5 lg:text-2xl lg:mr-3 lg:w-[45px] lg:h-[40px] w-[28px] h-[28px] mb-1.5' src="https://img.icons8.com/dotty/80/train.png" alt="train"/>
-                        <h1 className='mt-2 mr-5 lg:mr-5' style={{fontSize:'16px',fontFamily:'vazir'}}>قطار</h1>
-                    </Link>
-                        
-                    </div>
-                    <div className='pt-5 pb-5 it-bo font-color mt-2 mr-2 ml-2 w-full h-1/3  flex flex-row items-center cursor-pointer md:flex md:flex-col md:pt-2  md:rounded-lg 
-                    md:h-[60px]  md:w-[400px] md:relative md:bottom-12 md:mr-3
-                    lg:h-[80px] lg:w-[200px]  lg:mx-1 lg:relative lg:bottom-10
-                    '>
-                    <Link to='/Bus'>
-                        <img className='mt-12 mr-5 lg:text-2xl lg:mr-2 lg:w-[50px] lg:h-[45px] w-[30px] h-[30px] mb-0.5' src="https://img.icons8.com/carbon-copy/100/bus--v1.png" alt="bus--v1"/>  
-                        <h1 className=' mr-3 mt-0 lg:mr-2' style={{fontSize:'16px',fontFamily:'vazir'}}>اتوبوس</h1>
-                    </Link> 
+
+                </div>
+
+
+
+
+            {/* ********************************
+                *     center side of menu item     *
+                ******************************** */}
+                <div className='center '>
+                    <div className='row w-full h-[80px] flex flex-row justify-start items-center'>
+                        <div className='w-[200px] h-[60px]  mr-5'>
+                            <form >
+                            <label  for="cars"></label>
+                                <select className='choose w-[200px] h-[50px] rounded-3xl px-2 border' name="cars" id="cars">
+                                    <option value="volvo">یک طرفه</option>
+                                    <option value="saab">رفت و برگشت</option>
+                                </select>
+                            </form>
+                        </div>
                     </div>
                 </div>
-                <div className=' co-left w-[50%] h-[140px]  md:flex md:w-[40%] md:flex-row md:h-[55px]'>
-                    <div className='it-bo font-color mt-2 mr-2 ml-2 w-full h-1/3  flex flex-row  items-center cursor-pointer md:flex md:flex-col md:pt-2  md:rounded-lg 
-                    md:h-[60px]  md:w-[400px] md:relative md:top-1 md:mr-3
-                    lg:h-[80px] lg:w-[200px]  lg:mx-1 lg:relative lg:top-3
-                    '>
-                    <Link to='/Tour'>
-                        <img className='mr-5 lg:text-2xl lg:mr-2 lg:w-[45px] lg:h-[40px] w-[25px] h-[25px] mb-0.5 ' src="https://img.icons8.com/wired/64/backpack.png" alt="backpack"/>
-                        <h1 className='mt-0 mr-5 lg:mr-5' style={{fontSize:'16px',fontFamily:'vazir'}}>تور</h1>
-                    </Link>
+
+
+            {/* ********************************
+                *     down side of menu item     *
+                ******************************** */}
+                <div className='down lg:flex lg:flex-row lg:justify-between 
+                md:flex-col'>
+                    <div className='two-items lg:w-[50%]  lg:flex lg:flex-row  lg:justify-between md:flex-col'>
+                        <div className='firest mr-1'>
+                            <City></City>
+                        </div>
+                        <div className='second mr-2 mt-1 mb-4'>
+                            <Date></Date>
+                        </div>
                     </div>
-                    <div className=' font-color mt-2 mr-2 ml-2 w-full h-1/3  flex flex-row items-center cursor-pointer md:flex md:flex-col
-                     md:pt-2  md:rounded-lg md:h-[60px]  md:w-[400px] md:relative md:bottom-7  md:mr-5
-                     lg:h-[80px] lg:w-[200px]  lg:mx-1 lg:relative lg:bottom-4
-                     '>
-                    <Link to='/Hotel'>
-                        <img className='mt-8 mr-4 lg:text-2xl lg:mr-2 lg:w-[45px] lg:h-[40px] font-color w-[25px] h-[25px] mb-0.5' src="https://img.icons8.com/ios/50/3-star-hotel.png" alt="3-star-hotel"/>
-                        <h1 className='md:mr-4 mt-0 mr-4  lg:mr-3' style={{fontSize:'16px',fontFamily:'vazir'}}>هتل</h1>
-                    </Link>
-                    </div>
-                    <div className=' font-color mt-2 mr-1 ml-1 w-full h-1/3  flex flex-row items-center cursor-pointer md:flex md:flex-col
-                     md:pt-2  md:rounded-lg md:h-[60px]  md:w-[400px] md:relative md:bottom-14 md:mr-5
-                     lg:h-[80px] lg:w-[200px]  lg:mx-1  lg:relative lg:bottom-11
-                     '>
-                    <Link to='/Villa'>
-                        <img className='mt-14 mr-5 lg:text-2xl lg:mr-6 lg:w-[45px] lg:h-[40px] w-[25px] h-[25px] mb-1.5 ' src="https://img.icons8.com/dotty/80/camping-tent.png" alt="camping-tent"/>
-                        <h1 className='md:w-[100px] mt-0' style={{fontSize:'16px',fontFamily:'vazir'}}>ویلا و اقامتگاه</h1>
-                    </Link>
+                    <div className='two-items lg:w-[50%]  lg:flex lg:flex-row lg:justify-between md:flex-col'>
+                        <div className='trhee lg:mr-52'>
+                            <ItemCountDropdown></ItemCountDropdown>
+                        </div>
+                        <div className='for flex flex-row justify-center mr-5 mb-5'>
+                            <div className='ser w-[150px] h-[53px]  ml-5 mt-3 rounded-lg'>
+                                <h1 style={{fontFamily:'vazir'}} className='text-center pt-3.5' >جستوجو</h1>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            </div>
-            <div className='w-full h-16  pt-2 flex flex-row justify-center items-center border-spacing-1
-            md:flex md:flex-row md:justify-start md:items-center md:pr-2 pb-2
-            '>
-                <div className='bt-ch w-32 bg-zinc-100 rounded-lg lg:mr-5'>
-                        <form>
-                            <select style={{fontFamily:'vazir',fontSize:'16px'}} className='w-36 h-[40px] rounded-lg '>
-                                <option>یک طرفه</option>
-                                <option > رفت و برگشت</option>
-                            </select>
-                        </form>
-                </div>
-            </div>
-
-            <div className='w-full h-[100px]  
-            md:h-36 md:flex md:mb-0  mt-5 
-            lg:h-auto lg:flex lg:flex-row lg:justify-around 
-            
-            '>
-                {/* مبدا و مقصد */}
-                <div>
-                    <City></City>
-                </div>
-                {/* انتهای مبدا و مقصد */}
-
-                {/* تاریخ و رفت و برگشت */}
-                <div>
-                <Date></Date>
-                </div>
-                {/* انتهای تاریخ رفت و برگشت */}
-
-                {/* تعداد مسافر */}
-                <div>
-                    <PassengerSelector></PassengerSelector>
-                </div>
-                {/* انتهای تعداد مسافر */}
-
-                {/* جستوجو */}
-
-                <div className='w-[98%] h-11 search mt-2 mr-1 rounded-lg
-                md:mt-5 md:w-[120px] md:h-[35px] md-mr-3
-                lg:w-[180px] lg:h-[45px] lg:mt-1
-                '>
-                    <h1 className='ml-2 text-center cursor-pointer mt-2 md:mt-2 lg:mt-3' style={{fontSize:'16px',fontFamily:'vazir'}} >جستوجو</h1>
-                </div>
-                
-                {/* انتهای جستجو */}
-            </div>
-
         </div>
         </>
     )
 }
 
-export default Course
+
+export default MenuItem

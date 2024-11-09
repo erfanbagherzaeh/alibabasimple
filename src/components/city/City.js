@@ -1,84 +1,94 @@
-import React, { useState } from 'react';
+import * as React from 'react';
+import Box from '@mui/material/Box';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
+import './City.css'
+import { SiWappalyzer } from 'react-icons/si';
+import { FaExchangeAlt } from "react-icons/fa";
+import { useState, useEffect } from 'react';
 
-const CitySelectorComponent = () => {
-  const cities = [
-    ' تهران',
-    'شیراز ',
-    'اصفهان',
-    'کیش',
-    'جنوب'
-  ];
+export default function BasicSelect() {
+  const [cities, setCities] = useState({
+    origin: '',
+    destination: ''
+  });
 
-  const [originCity, setOriginCity] = useState('');
-  const [destinationCity, setDestinationCity] = useState('');
+  useEffect(() => {
+    // این اثر می‌تواند برای تنظیم اولیه شهرهای انتخاب شده استفاده شود
+    setCities({ origin: '', destination: '' });
+  }, []);
+
+  const handleSelectChange = (cityType) => (event) => {
+    setCities(prevState => ({
+      ...prevState,
+      [cityType]: event.target.value
+    }));
+  };
+
+  const handleSwap = () => {
+    if (cities.origin && cities.destination) {
+      setCities(prevState => ({
+        origin: prevState.destination,
+        destination: prevState.origin
+      }));
+    }
+  };
 
   return (
-    <div className="w-full h-14 border flex flex-row justify-between rounded-md mt-5 
-    sm:w-full sm:h-14 sm:flex sm:flex-row sm:justify-between
-    md:w-[250px] md:h-[35px]
-    lg:w-[340px] lg:h-[45px] lg:mt-1
-    ">
-      <div className="w-1/2 pt-5 pl-2 flex flex-row justify-center items-center
-      sm:w-1/2 sm:pt-5 sm:pl-2 sm:flex sm:flex-row sm:justify-center sm:items-center
-      md:w-1/2 
-      ">
-        <select
-        style={{fontFamily:'vazir',fontSize:'14px'}}
-          value={originCity}
-          onChange={(e) => setOriginCity(e.target.value)}
-          className="h-full w-full bg-white  mb-5 mr-2 rounded-r-lg border
-          md:h-[35px] md:w-[100px] md:mr-0
-          lg:w-[150px] lg:h-[45px]
-          "
-        >
-          <option value="">شهر مبدا</option>
-          {cities.map((city, index) => (
-            <option key={index} value={city}>
-              {city}
-            </option>
-          ))}
-        </select>
-      </div>
-      <div>
-      <button
-        onClick={() => {
-          const tempCity = originCity;
-          setOriginCity(destinationCity);
-          setDestinationCity(tempCity);
-        }}
-        className="w-8 h-4 bg-slate-100 rounded-full mt-5
-        md:mt-2.5 md:ml-2 md:pb-5
-        "
-      >
-        <span style={{fontSize:'15px',color:'black'}} className="material-symbols-outlined ">
-        cached
-        </span>
-      </button>
-      </div>
+    <>
+      <div className='real-container flex  w-full h-[80px] justify-center items-center'>
+        <div className='right'>
+          <Box>
+            <FormControl className='box'>
+              <InputLabel value={cities.origin} onChange={handleSelectChange('origin')} className='mx-5 mc' style={{fontFamily:'vazir'}} id="demo-simple-select-label">شهر مبدا</InputLabel>
+              <Select
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+                value={cities.origin}
+                label="Origin City"
+                onChange={handleSelectChange('origin')}
+              >
+                <MenuItem style={{fontFamily:'vazir'}} value="">انتخاب کنید</MenuItem>
+                <MenuItem style={{fontFamily:'vazir'}} value="تهیه">تهیه</MenuItem>
+                <MenuItem style={{fontFamily:'vazir'}} value="اصفهان">اصفهان</MenuItem>
+                <MenuItem style={{fontFamily:'vazir'}} value="شیراز">شیراز</MenuItem>
+                <MenuItem style={{fontFamily:'vazir'}} value="جنوب">جنوب</MenuItem>
+                <MenuItem style={{fontFamily:'vazir'}} value="کیش">کیش</MenuItem>
+                <MenuItem style={{fontFamily:'vazir'}} value="قشم">قشم</MenuItem>
+              </Select>
+            </FormControl>
+          </Box>
+        </div>
 
-      <div className="w-1/2 pb-0 pl-2 flex flex-row justify-center items-center
-        sm:w-1/2 sm:pl-2 sm:pb-0 sm:flex sm:flex-row sm:justify-center sm:items-center
-        md:w-1/2 
-      ">
-        <select
-            style={{fontFamily:'vazir',fontSize:'14px'}}
-          value={destinationCity}
-          onChange={(e) => setDestinationCity(e.target.value)}
-          className="h-[36px] w-full bg-white  mr-2 rounded-l-lg border
-          md:h-[35px] md:w-[105px] md:mr-0
-          lg:w-[150px] lg:h-[45px]
-          "
-        >
-          <option  value="">شهر مقصد</option>
-          {cities.map((city, index) => (
-            <option key={index} value={city}>
-              {city}
-            </option>
-          ))}
-        </select>
+          <button className='btc   rounded-full w-[30px] h-[30px] pr-2' onClick={handleSwap} disabled={!cities.origin || !cities.destination}>
+            <FaExchangeAlt />
+          </button>
+
+        <div className='left'>
+          <Box>
+            <FormControl className='box'>
+              <InputLabel value={cities.destination} onChange={handleSelectChange('destination')} className='mx-5' style={{fontFamily:'vazir'}} id="demo-simple-select-label">شهر مقصد</InputLabel>
+              <Select
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+                value={cities.destination}
+                label="Destination City"
+                onChange={handleSelectChange('destination')}
+              >
+                <MenuItem style={{fontFamily:'vazir'}} value="">انتخاب کنید</MenuItem>
+                <MenuItem style={{fontFamily:'vazir'}} value="تهیه">تهیه</MenuItem>
+                <MenuItem style={{fontFamily:'vazir'}} value="اصفهان">اصفهان</MenuItem>
+                <MenuItem style={{fontFamily:'vazir'}} value="شیراز">شیراز</MenuItem>
+                <MenuItem style={{fontFamily:'vazir'}} value="جنوب">جنوب</MenuItem>
+                <MenuItem style={{fontFamily:'vazir'}} value="کیش">کیش</MenuItem>
+                <MenuItem style={{fontFamily:'vazir'}} value="قشم">قشم</MenuItem>
+              </Select>
+            </FormControl>
+          </Box>
+        </div>
       </div>
-    </div>
+    </>
   );
-};
-
-export default CitySelectorComponent;
+}

@@ -1,0 +1,12 @@
+.box{
+    direction: rtl;
+    width: 180px;
+    border-radius: 10px;
+    
+}
+
+.btc{
+    background-color: rgb(217, 213, 213);
+    color: rgb(255, 252, 252);
+
+}

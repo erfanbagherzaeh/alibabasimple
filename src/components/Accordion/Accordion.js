@@ -22,12 +22,12 @@ const Accordion = () => {
 
   return (
     <>
-    <div className=' w-full h-12  mt-5
+    <div className=' w-full h-12  mt-5 
     sm:w-3/5 sm:m-auto
     '>
       <h1 style={{fontFamily:'vazir',fontSize:'25px'}} className='font-extrabold pt-2 pr-2 mt-10 '>پرسش های شما</h1>
     </div>
-    <div className=" accordion-container h-auto w-full max-w-screen-xl mx-auto px-4 py-8 border  rounded-lg text-end my-4 mb-10 
+    <div className=" m-10 accordion-container h-auto w-full max-w-screen-xl mx-auto px-4 py-8 border  rounded-lg text-end my-4 mb-10 
     sm:w-3/5 sm:m-auto
     md:w-3/5 md:m-auto
     ">
