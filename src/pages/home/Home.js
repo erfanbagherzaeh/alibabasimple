@@ -14,12 +14,14 @@ import Login from '../../components/login/Login'
 
 
 function Home(){
-    const [articles , setAtricles] = useState([])
 
-    useEffect( ()=>{
-        axios.get('http://localhost:3000/articles')
-        .then( response => setAtricles(response.data))
-    } , [])
+    // request to server 
+    // const [articles , setAtricles] = useState([])
+
+    // useEffect( ()=>{
+    //     axios.get('http://localhost:3000/articles')
+    //     .then( response => setAtricles(response.data))
+    // } , [])
     return(
         <>
          <Navbar></Navbar>
@@ -45,12 +47,12 @@ function Home(){
 
 
         {/* create fake api */}
-         <div className='w-full h-a  m-2 flex flex-row flex-wrap 
+         {/* <div className='w-full h-a  m-2 flex flex-row flex-wrap 
         md:w-3/5 md:m-auto '>
             {articles.map(article => (
                 <ArticleItem {...article}></ArticleItem>
             ))}
-        </div>
+        </div> */}
 
         
         <div className="w-full h-auto  mb-5 
