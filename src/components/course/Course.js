@@ -13,16 +13,41 @@ import ItemCountDropdown from '../age/Age'
 import { Link } from 'react-router-dom';
 
 
+function parvazD(){
+    document.getElementById('parvazD').style.borderBlockEndWidth = '4px';
+    document.getElementById('parvazD').style.borderColor = 'PowderBlue'
+}
+function parvazB(){
+    document.getElementById('parvazB').style.borderBlockEndWidth = '4px';
+    document.getElementById('parvazB').style.borderColor = 'PowderBlue'
+}
+function Train(){
+    document.getElementById('Train').style.borderBlockEndWidth = '4px';
+    document.getElementById('Train').style.borderColor = 'PowderBlue'
+}
+function Bus(){
+    document.getElementById('Bus').style.borderBlockEndWidth = '4px';
+    document.getElementById('Bus').style.borderColor = 'PowderBlue'
+}
+function Tour(){
+    document.getElementById('Tour').style.borderBlockEndWidth = '4px';
+    document.getElementById('Tour').style.borderColor = 'PowderBlue'
+}
+function Hotel(){
+    document.getElementById('Hotel').style.borderBlockEndWidth = '4px';
+    document.getElementById('Hotel').style.borderColor = 'PowderBlue'
+}
+
+function Villa(){
+    document.getElementById('Villa').style.borderBlockEndWidth = '4px';
+    document.getElementById('Villa').style.borderColor = 'PowderBlue'
+}
+
+
+
+
 function MenuItem(){
-    // <Box sx={{ width: '100%', mb: 10 }}>
-    // <Box sx={{
-    //   backgroundColor: 'white',
-    //   width: '100%',
-    //   maxWidth: '1200px',
-    //   margin: '0 auto',
-    //   position: 'relative',
-    //   p: 2,
-    // }}>
+
     return(
         <>
 
@@ -42,8 +67,9 @@ function MenuItem(){
                     lg:flex lg:flex-row lg:w-[57%]  lg:justify-end lg:pr-10
                    
                     '>  
+
                         <Link to='/' className='w-0 h-0 lg:w-[120px] lg:h-[100px]  lg:mx-6 lg:mb-5'>
-                        <div className='tab w-0 h-0 lg:w-[120px] lg:h-[100px]  lg:mx-6 md:{10}'>
+                        <div id='parvazD' onClick={parvazD} className='tab w-0 h-0 lg:w-[120px] lg:h-[100px]  lg:mx-6 md:{10}'>
                             <div className='lg:w-full lg:h-[70%] flex flex-row justify-center items-center'>
                                 <GiCommercialAirplane   size={'30px'} />
                             </div>
@@ -54,7 +80,7 @@ function MenuItem(){
                         </Link>
 
                         <Link to='/ParvazB'>
-                        <div className='tab w-[120px] h-[100px]  my-5 lg:mx-6 '>
+                        <div id='parvazB' onClick={parvazB} className='tab w-[120px] h-[100px]  my-5 lg:mx-6 '>
                             <div className='w-full h-[70%]  flex flex-row justify-center items-center'>
                                 <MdAirplanemodeActive    size={'30px'} />
                             </div>
@@ -66,7 +92,7 @@ function MenuItem(){
 
                         <Link to='/Train'>
 
-                        <div className='tab w-[120px] h-[100px]  my-5 lg:mx-6'>
+                        <div id='Train' onClick={Train} className='tab w-[120px] h-[100px]  my-5 lg:mx-6'>
 
                             <div className='w-full h-[70%]  flex flex-row justify-center items-center'>
                                 <PiTrainFill     size={'30px'} />
@@ -78,7 +104,7 @@ function MenuItem(){
                         </Link>
 
                         <Link to='/Bus'>
-                        <div className='tab w-[120px] h-[100px]  my-5 lg:mx-6'>
+                        <div id='Bus' onClick={Bus} className='tab w-[120px] h-[100px]  my-5 lg:mx-6'>
 
                             <div className='w-full h-[70%]  flex flex-row justify-center items-center'>
                                 <BsBusFront     size={'30px'} />
@@ -97,7 +123,7 @@ function MenuItem(){
                     
                     '>  
                          <Link to='/Tour'>
-                        <div className='tab w-[120px] h-[100px]  my-5 lg:mx-4'>
+                        <div id='Tour' onClick={Tour} className='tab w-[120px] h-[100px]  my-5 lg:mx-4'>
                        
 
                             <div className='w-full h-[70%]  flex flex-row justify-center items-center'>
@@ -111,7 +137,7 @@ function MenuItem(){
                         </Link>
                         <Link to='/Hotel'>
 
-                        <div className='tab w-[120px] h-[100px]  my-5 lg:mx-4'>
+                        <div id='Hotel' onClick={Hotel} className='tab w-[120px] h-[100px]  my-5 lg:mx-4'>
 
                             <div className='w-full h-[70%]  flex flex-row justify-center items-center'>
                                 <FaHotel      size={'30px'} />
@@ -123,7 +149,7 @@ function MenuItem(){
                         </div>
                         </Link>
                         <Link to='/Villa'>
-                        <div className='tab w-[120px] h-[100px]  my-5 lg:mx-4'>
+                        <div id='Villa' onClick={Villa} className='tab w-[120px] h-[100px]  my-5 lg:mx-4'>
 
                             <div className='w-full h-[70%]  flex flex-row justify-center items-center'>
                                 <MdVilla       size={'30px'} />
