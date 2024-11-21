@@ -48,17 +48,12 @@ function Navbar(){
                     </div>
                     <div className='nav-line w-[1px] h-4 bg-slate-200 mr-1 mt-1'></div>
                     <div className='w-[70px] h-5  mr-1 flex flex-row justify-center items-center hover:bg-gray-100 hover:rounded-lg '>
-                    <form>
-                            <select style={{fontFamily:'vazir',fontSize:'16px'}} className='select font-color'>
-                                <option> بیشتر</option>
-                                <option > علی بابا پلاس</option>
-                                <option > مجله علی بابا </option>
-                                <option >بیمه مسافرتی</option>
-                            </select>
-                        </form>
+                       
+
                     </div>
 
                 </div>
+                
             </div>
             <div className='nav-right w-full h-full flex flex-row justify-around items-center lg:w-1/2'>
                 <div className='w-full h-full flex flex-row justify-around items-center

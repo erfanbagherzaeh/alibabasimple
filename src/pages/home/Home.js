@@ -13,6 +13,8 @@ import ArticleItem from '../../components/articleItem/ArticleItem'
 import Login from '../../components/login/Login'
 
 
+import LoginPage from '../../components/LoginPage/LoginPage'
+
 function Home(){
 
     // request to server 
@@ -154,7 +156,7 @@ function Home(){
         </div>
         <Intro></Intro>
         <Footer></Footer> 
-        
+        <LoginPage></LoginPage>
 
         </>
     )
